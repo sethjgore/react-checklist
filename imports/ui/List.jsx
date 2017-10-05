@@ -43,37 +43,39 @@ export default class List extends Component {
 		const dataCURRENT = [...this.state.list]
 
 		//finds the data LOCATION index
-		const dataLOCATION = this.state.list.findIndex((obj => obj._id == _id));
+		const dataLOCATION = this.state.list.findIndex(obj => obj._id == _id);
 		
 		const dataOBJECT = dataCURRENT[dataLOCATION]
 
 		//immutablity: flatten CURRENT and IN data
-		const dataOUT = Object.assign({}, dataOBJECT,dataCURRENT);
+		const dataOUT = Object.assign({}, dataOBJECT, dataIN);
 
-		const dataIMMUTABLE = () => dataCURRENT[dataLocation] = dataOUT
+		let dataIMMUTABLE = function(){
+
+		 dataCURRENT[dataLOCATION] = dataOUT
+
+		 return dataCURRENT;
+
+		 }
 	
-
-		return {
-				dataIMMUTABLE: dataIMMUTABLE
-			};
+		return dataIMMUTABLE();
 	}
 
 	actionEdit = ({_id, ...dataIN}) => {
 
-		let {dataIMMUTABLE} = this.actionLocateAndCreateImmutable(dataIN)
+		let dataIMMUTABLE = this.actionLocateAndCreateImmutable({_id, ...dataIN})
 
 		// localStorage.setItem({'list', JSON.stringify})
 		this.setState({list: dataIMMUTABLE})
 		console.log(this.state.list)
 	}
 
-	actionRemove(props){
-
+	actionRemoveInBasket(props){
 	}
 
   renderItems() {
     return this.state.list.map((item) => (
-      <Item {...item} key={item._id} />
+      <Item {...item} action={this.actionEdit} key={item._id} />
     ));
   }
  
