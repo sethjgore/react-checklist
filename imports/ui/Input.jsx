@@ -5,10 +5,11 @@ export default class ItemInput extends Component {
 
 	constructor(props){
 		super(props)
-		this.state = {text: "", inBasket: true, quantity: 1};
+		this.state = {text: "", who: "", inBasket: false, quantity: 1, saved: false};
 
 		this.whenChange = this.whenChange.bind(this);
     this.whenSubmit = this.whenSubmit.bind(this);
+    this.whenSave = this.whenSave.bind(this);
 
     this.defaultState = this.state;
 	}
@@ -24,6 +25,10 @@ export default class ItemInput extends Component {
 		this.setState({ [key]: value})
 	}
 
+	whenSave(event){
+		this.setState({saved: true});
+	}
+
 	whenSubmit(event){
 		event.preventDefault();
 		this.props.action(this.state);
@@ -32,10 +37,11 @@ export default class ItemInput extends Component {
 
 	render(){
 		return (
-			<form  onSubmit={this.whenSubmit}>
-			<input name="quantity" value={this.state.quantity} type="number" onChange={this.whenChange}/>
-			<input name="text" onChange={this.whenChange} type="text" value={this.state.text} />
-			<button onClick={this.whenSubmit}>Add</button>
+			<form className="flex bg-white width-full p3" onSubmit={this.whenSubmit}>
+			<input className="flex-auto fb-02 bg-gray button type-name-monospace type-size-paragraph center width-three" name="quantity" value={this.state.quantity} type="number" onChange={this.whenChange}/>
+			<input placeholder="What to buy?" className="px2 flex-auto fb-1 type-name-monospace type-size-paragraph" name="text" onChange={this.whenChange} type="text" value={this.state.text} />
+			<button className="button flex type-name-monospace type-size-paragraph button-pill bg-green px2 py2 color-white" onClick={this.whenSubmit}><div className="pr2">Add</div></button>
+			<button className="button type-name-monospace type-size-menu button-pill bg-blue px1 py1 color-white" onClick={this.whenSave}>Save</button>
 			</form>
 	)
 	}

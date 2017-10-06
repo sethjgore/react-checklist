@@ -1,0 +1,312 @@
+@import 'basscss.sass';
+@import 'extra.sass';
+@import 'fb.sass';
+@import 'type.sass';
+@import 'button.sass';
+
+body{
+  max-width: 100%;
+  max-height: 100%;
+  overflow-x: hidden;
+  font-family: Roboto, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+// OPACITY SPECTRUM
+
+.color-cloudy{
+  color: hsla(0,0,95,.6);
+}
+
+.bg-cloudy{
+  background: hsla(0,0,95,.6);
+}
+
+.border-cloudy{
+  border-color: hsla(0,0,95,.6);
+}
+
+.bg-glow{
+  background: radial-gradient(4em, rgba(255, 255, 255, 0.57), rgba(255, 255, 255, 0))
+  }
+
+.bg-glow-reverse{
+  background: linear-gradient(to bottom, hsla(0,0,89%,54%), transparent)
+}
+
+.color-transparent{
+  color: transparent;
+}
+
+.bg-transparent{
+  background: transparent;
+}
+
+.border-transparent{
+  border-color: transparent;
+}
+
+
+.button-shadow{
+  border-radius: 2em;
+  padding: 0.65em 1.5em;
+  outline: none;
+  border: none;
+  transition: 0.2s ease-in;
+  line-height: 1em;
+
+  &:hover{
+    transform: translateY(-.2em);
+    box-shadow: 0em .2em 1em hsla(0,0%,0%,.3);
+    }
+
+}
+    
+.color-white{
+  color: white;
+}
+
+
+.bg-white{
+  background: white;
+}
+
+
+.border-white{
+  border-color: white;
+}
+
+
+
+.color-black{
+  color: hsl(0,0%,2);
+}
+
+
+.bg-black{
+  background: hsl(0,0%,2);
+}
+
+
+.border-black{
+  border-color: hsl(0,0%,2);
+}
+
+
+.color-red{
+  color: hsl(0, 74%, 54%)
+}
+
+
+.bg-red{
+  background: hsl(0, 74%, 54%)
+}
+
+
+.border-red{
+  border-color: hsl(0, 74%, 54%)
+}
+
+
+.color-orange{
+  color: hsl(24, 100%, 58%)
+}
+
+
+.bg-orange{
+  background: hsl(24, 100%, 58%)
+}
+
+
+.border-orange{
+  border-color: hsl(24, 100%, 58%)
+}
+
+.color-yellow{
+  color: hsl(50, 100%, 50%)
+}
+
+
+.bg-yellow{
+  background: hsl(50, 100%, 50%)
+}
+
+
+.border-yellow{
+  border-color: hsl(50, 100%, 50%)
+}
+
+
+
+.color-green{
+  color: hsl(144, 100%, 39%)
+}
+
+
+.bg-green{
+  background: hsl(144, 100%, 39%)
+}
+
+
+.border-green{
+  border-color: hsl(144, 100%, 39%)
+}
+
+
+.color-blue{
+  color: hsl(200, 100%, 42%)
+}
+
+
+.bg-blue{
+  background: hsl(200, 100%, 42%)
+}
+
+
+.border-blue{
+  border-color: hsl(200, 100%, 42%)
+}
+
+
+.color-blue-1{
+  color:  hsl(202, 84%, 76%)
+}
+
+
+.bg-blue-1{
+  background:  hsl(202, 84%, 76%)
+}
+
+
+.border-blue-1{
+  border-color:  hsl(202, 84%, 76%)
+}
+
+
+.color-purple{
+  color: hsl(269, 94%, 67%)
+}
+
+
+.bg-purple{
+  background: hsl(269, 94%, 67%)
+}
+
+
+.border-purple{
+  border-color: hsl(269, 94%, 67%)
+}
+
+
+.color-gray, .color-gray-1{
+  color: hsl(0, 0%, 90%)
+}
+
+
+.bg-gray, .bg-gray-1{
+  background: hsl(0, 0%, 90%)
+}
+
+
+.border-gray, .border-gray-1{
+  border-color: hsl(0, 0%, 90%)
+}
+  
+.color-gray-2{
+  color: hsl(0, 0%, 83%)
+}
+
+
+.bg-gray-2{
+  background: hsl(0, 0%, 83%)
+}
+
+
+.border-gray-2{
+  border-color: hsl(0, 0%, 83%)
+}
+
+
+// CONTROLS INTERACTIONS
+
+.button{
+  border: none;
+}
+
+.button:hover{
+  filter: brightness(.8);
+  text-decoration: none;
+}
+
+.button-pill{
+  border-radius: 25em
+}
+
+
+a{
+  text-decoration: color;
+}
+
+
+a:hover{
+  cursor: pointer;
+}
+
+
+.sheet{
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.sheet-soft{
+  width: 100%;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  }
+  
+.sheet-scroll{
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  }
+  
+.sheet-soft-scroll{
+  width: 100%;
+  max-width: 100%;
+}
+  
+.resize-none{
+  resize: none;
+}
+  
+textarea{
+  border: none;
+}
+  
+textarea:focus{
+  outline: none;
+  }
+
+input{
+  border: none;
+}
+  
+input:focus{
+  outline: none;
+ }
+
+  
