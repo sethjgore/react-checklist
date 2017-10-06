@@ -1,6 +1,6 @@
 # untapt.checklist
 
-Hello Sammy + Company,
+Hello Sam + Company,
 
 Thanks for giving me the opportunity to do this test. It took me about 2.5 hours on and off Thursday and Friday. 
 
