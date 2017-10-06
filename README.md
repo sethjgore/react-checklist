@@ -23,6 +23,7 @@ I use Meteor + Reacft to manage prototypes faster. Like you mentioned, I'm not g
 3) Clear the entire list
 
 #Features that could be useful
+
 0) Save the list to LocalStorage. Right now it is per-session storage using React's internal state.
 1) As you can see, I put 'Natasha' in the "who" button in each item. It would be useful to be able to assign roomates to items
 2) Filter the list by roomate
