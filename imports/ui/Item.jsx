@@ -4,9 +4,7 @@ const ItemText = ({text}) => <div className="flex-auto fb-1 type-name-monospace 
 
 const ItemQuantity = ({quantity}) => <div className="type-name-monospace pl2 type-size-subtitle color-white">{quantity}</div>
 
-const ItemIsWhose = () => <div className="self-end type-name-monospace px2 py1 type-size-menu bg-white button button-pill button-red color-red">Natasha</div>
-
-const ItemIsSaved = () => <div className="self-end type-name-monospace px2 py1 type-size-menu bg-white button button-pill bg-blue color-white">Saved</div>
+const ItemIsSaved = () => <div className="self-end type-name-monospace px2 py1 type-size-menu button button-pill bg-blue color-white">Pinned</div>
 
 
 //ItemInBasket Component - Button
@@ -54,7 +52,6 @@ export default class Item extends Component {
       <ItemInBasket {...this.props}/>
       <ItemQuantity {...this.props}/>
       <ItemText {...this.props}/>
-      <ItemIsWhose {...this.props}/>
       {this.renderSaved()}
 
       </div>

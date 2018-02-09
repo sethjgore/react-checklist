@@ -37,11 +37,12 @@ export default class ItemInput extends Component {
 
 	render(){
 		return (
-			<form className="flex bg-white width-full p3" onSubmit={this.whenSubmit}>
-			<input className="flex-auto fb-02 bg-gray button type-name-monospace type-size-paragraph center width-three" name="quantity" value={this.state.quantity} type="number" onChange={this.whenChange}/>
+			<form className="flex bg-white width-full" onSubmit={this.whenSubmit}>
+			<input className="flex-auto fb-02 bg-gray button type-name-monospace type-size-paragraph center width-three" name="quantity" value={this.state.quantity} type="text" onChange={this.whenChange}/>
 			<input placeholder="What to buy?" className="px2 flex-auto fb-1 type-name-monospace type-size-paragraph" name="text" onChange={this.whenChange} type="text" value={this.state.text} />
-			<button className="button flex type-name-monospace type-size-paragraph button-pill bg-green px2 py2 color-white" onClick={this.whenSubmit}><div className="pr2">Add</div></button>
-			<button className="button type-name-monospace type-size-menu button-pill bg-blue px1 py1 color-white" onClick={this.whenSave}>Save</button>
+			<div class="p1 flex"><button className="items-center justify-center button flex type-name-monospace type-size-paragraph button-pill bg-blue px2 py2 color-white" onClick={this.whenSubmit}><div>Add</div></button>
+			<button className="button type-name-monospace type-size-menu button-pill bg-green px1 py1 color-white" onClick={this.whenSave}>Pin</button>
+			</div>
 			</form>
 	)
 	}
